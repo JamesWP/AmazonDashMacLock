@@ -7,7 +7,7 @@ dash_button = require('node-dash-button');
 var exec = require('child_process').exec;
 var dash = dash_button(button); //address from step above
 dash.on("detected", function (){
-  exec('~/bin/lock', function callback(error, stdout, stderr){});
+  exec('./lock.sh', function callback(error, stdout, stderr){});
   exec('afplay lock.m4a', function callback(error, stdout, stderr){});
 
   
